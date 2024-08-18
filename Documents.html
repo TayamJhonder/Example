@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Blogs.css">
+</head>
+<body>
+
+  <div class="audio">
+    <audio controls autoplay loop preload="auto">
+      <source src="work.mp3" type="audio/mp3">
+    </audio><br>
+
+    <h2>
+      <blockquote>
+
+        Hi User! Welcome to my website! I'm so glad you stopped by. I hope you find something that interests you. Enjoy your stay!
+        <br>
+        <br>
+        1.My Personal experiences and stories:
+        <br>
+        <br>
+        Hi there, I'm here to share my story of how I built this website. First, back in 2021 before I enrolled in Grade 11, I immediately looked for the ICT strand because I wanted to learn about computers and its languages. Second, I searched on Facebook for things related to IT fields and joined them all even hacker groups. Lastly, I studied front-end development to build my own personal website. It wasn't easy when I started learning front-end because of the many documents that I had to read and I also joined bootcamps until slowly but surely,I started understanding front-end. From then on, I started teaching myself and joined Code Wars on Solo Learn and completed the easy lessons there so that I can get certificates to use for my portfolio.
+        <br>
+        <br>
+        2. How-to guides - You can create step-by-step guides on how to do something that you are good at, such as cooking, drawing, or playing an instrument.
+        <br>
+        <br>
+        For me, it depends on how fast you learn when studying. The only tips I can give you when studying something is to focus on it and allocate a lot of time for reading and researching the things you like, like me, I'm into animation so I allocate a lot of time for watching and researching different designs and animations on websites.Never give up, keep working hard and your efforts will bear fruit in the future.
+        <br>
+        <br>
+        3. Product reviews - You can review products that you have used and share your honest opinion about them.
+        <br>
+        <br>
+        I will share with you now a product about the beauty products and food supplement community I joined. The company's name is Empowered Consumerism Company, and I was part of a famous team leader called SWAT Alliance International Team. I studied their products such as the Pythozer tablet which has a lot of vitamins that can help our body, then one of their favorite products is the Perfect White tablet which is very good for the skin because it increases collagen in our body to make us look like a baby, then I have my favorite soap from them called Oxygen Bar Anti-Aging & Whitening Soap, then they have one more of my favorite vitamins which is the C-Supreme. It is very rich in Vitamin C so it is perfect for cold weather.Do you guys know that the Empowered Consumerism company was given a Guinness World Record? Because they are the first to make alkaline coffee in the whole world!
+        <br>
+        <br>
+        4. Travel blogs - If you love to travel, you can write about your adventures and share tips on the best places to visit.
+        <br>
+        <br>
+        5. News and current events - You can write about the latest news or events happening in your community or around the world.
+        <br>
+        <br>
+        Remember to always keep your content engaging, informative, and interesting for your readers!
+      </blockquote>
+    </h2>
+
+<div class="cursor"></div>
+
+  <style>
+
+    .cursor {
+      z-index: 999;
+      position: fixed;
+      background: #2696E8;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      pointer-events: none;
+      box-shadow: 0 0 20px #2696E8,
+      0 0 60px #2696E8,
+      0 0 100px #2696E8;
+      animation: colors 5s infinite;
+      transform: translate(-50%, -50%);
+      display: none;
+    }
+
+    @keyframes colors {
+      0% {
+        filter: hue-rotate(0deg);
+      }
+      100% {
+        filter: hue-rotate(360deg);
+      }
+    }
+
+    .cursor:before {
+      content: '';
+      position: absolute;
+      background: #2696E8;
+      width: 40px;
+      height: 40px;
+      opacity: 0.2;
+      transform: translate(-30%, -30%);
+      border-radius: 50%;
+    }
+  </style>
+  <script>
+
+    const cursor = document.querySelector(".cursor");
+    var timeout;
+
+    document.addEventListener("mousemove", (e) => {
+      let x = e.pageX;
+      let y = e.pageY;
+
+      cursor.style.top = y + "px";
+      cursor.style.left = x + "px";
+      cursor.style.display = "block";
+
+      function mouseStopped() {
+        cursor.style.display = "none";
+      }
+      clearTimeout(timeout);
+      timeout = setTimeout(mouseStopped, 5000);
+    });
+
+    document.addEventListener("mouseout", () => {
+      cursor.style.display = "none";
+    });
+  </script>
+
+    <div class="nav-bar">
+
+      <ul>
+        <li><a href="About Me.html">
+          / About Me  /</a></li>
+        <li><a href="Gallery.html">
+          / Gallery  /</a></li>
+        <li><a href="Blogs.html">/ Blogs  /</a></li>
+        <li><a href="Articles.html"> / Articles  /</a></li>
+        <li><a href="Login.html">/ Login  /</a></li>
+        <li><a href="Documents.html">/ Documents  /</a></li>
+        <li><a href="Download.html">/ Downloads  /</a></li>
+        <li><a href="Products.html">
+          / Products  /</a></li>
+        <li><a href="Recommendation.html">/ Recommendations  /</a></li>
+      </ul>
+
+
+
+    <footer>
+      <div class="container1">
+        <div class="row">
+          <div class="col-sm">
+            <ul>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-sm copyright">
+            Copyright © 2023 MyWebsite. All rights reserved.
+          </div>
+
+        </div>
+        <!-- end row -->
+
+      </div>
+      <!-- end container -->
+    </footer>
+  </body>
+</html>

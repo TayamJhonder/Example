@@ -1,0 +1,72 @@
+body {
+  background: linear-gradient(90deg, rgba(25220,20,60,0.8), rgba(255,127,80,0.8));
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+h2 {
+  font-family: 'Roboto Slab', serif;
+  background: linear-gradient(to right, rgba(255,200,150,150), rgba(255,200,150,1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #fff;
+}
+.nav-bar {
+  margin: 0;
+  font-family: 'Roboto Slab', serif;
+  text-align: center;
+  background: linear-gradient(to right, rgba(250,100,10,100), rgba(255,10,100,1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow 1s ease-in-out infinite;
+  opacity: 5;
+
+
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+li {
+  display: inline-block;
+  font-size: 30px;
+}
+
+a {
+  display: block;
+  padding: 20px;
+}
+
+footer {
+  background: linear-gradient(to right, rgba(255,200,150,150), rgba(255,200,150,1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /*color: #fff;
+  */
+  padding: 20px;
+  bottom: 0;
+  text-align: center;
+}
+.audio {
+  border-radius: 10px;
+  padding-top: 5px;
+  text-align: center;
+  position: relative;
+
+
+}

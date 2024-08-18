@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Login.css">
+  <title>Login</title>
+</head>
+
+<body>
+  <div class="audio">
+    <audio controls autoplay loop preload="auto">
+      <source src="work.mp3" type="audio/mp3">
+    </audio>
+  </div>
+
+
+  <h2 style="text-align: center"> Sign Up </h2>
+  <div class="form-container">
+
+    <form action="#">
+
+      <div class="input-cnt">
+        <i class="material-icons">Person</i>
+        <input type="text" placeholder="Name" name="name" />
+    </div>
+
+    <div class="input-cnt">
+      <i class="material-icons">Fb</i>
+      <input type="text" placeholder="Username" name="username" />
+  </div>
+
+  <div class="input-cnt">
+    <i class="material-icons">Email</i>
+    <input type="text" placeholder="Email" name="email" />
+</div>
+
+<div class="input-cnt">
+  <i class="material-icons">Lock</i>
+  <input type="password" placeholder="Password" name="password" />
+</div>
+
+<div class="input-cnt">
+<input type="submit" value="Sign Up" />
+</div>
+
+</form>
+
+</div>
+
+<h2 style="text-align: center"> Login </h2>
+<div class="form-container">
+
+<form action="#">
+
+<div class="input-cnt">
+<i class="material-icons">Person</i>
+<input type="text" placeholder="Email or username" name="email" />
+</div>
+
+<div class="input-cnt">
+<i class="material-icons">Lock</i>
+<input type="password" placeholder="Password" name="password" />
+</div>
+
+<div class="input-cnt">
+<input type="submit" value="Login" />
+</div>
+
+</form>
+
+</div>
+
+
+
+<style>
+
+.form-container {
+margin: 20px;
+padding: 15px;
+background: gray;
+color: white;
+box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
+border-radius: 20px;
+}
+.input-cnt {
+display: flex;
+/* display the icon and the input in a line */
+margin-bottom: 15px;
+}
+.input-cnt:last-child {
+margin-bottom: 0px;
+border-radius: 10;
+}
+.input-cnt > i {
+min-width: 40px;
+/* set a minimum width for the icon */
+padding: 10px;
+/* make sure the icon is centered vertically */
+text-align: center;
+/* horizontally center the icon */
+background: lightgrey;
+border-top-left-radius: 10px;
+border-bottom-left-radius: 50px;
+
+color: coral;
+}
+/* change styles when focused */
+.input-cnt: hover > i {
+background: coral;
+color: white;
+}
+/* style the inputs */
+.input-cnt > input[type="text"], .input-cnt > input[type="password"] {
+outline: none;
+border: none;
+padding: 10px;
+border: 3px solid lightgrey;
+border-top-right-radius: 50px;
+border-bottom-right-radius: 10px;
+width: 100%;
+}
+/* style the submit button */
+.input-cnt > input[type="submit"] {
+border: none;
+border-radius: 20px;
+outline: none;
+width: 75%;
+margin: 0 auto;
+font-size: 105%;
+padding: 8px;
+color: coral;
+background: #fff;
+font-family: 'Roboto Slab', serif;
+animation: gradient 10s ease infinite;
+}
+/* add a hover effect for the submit button */
+.input-cnt > input[type="submit"]:hover {
+color: white;
+background: #0076ff;
+}
+</style>
+
+<div class="cursor">
+</div>
+
+<style>
+
+
+.cursor {
+z-index: 999;
+position: fixed;
+background: #2696E8;
+width: 15px;
+height: 15px;
+border-radius: 50%;
+pointer-events: none;
+box-shadow: 0 0 20px #2696E8,
+0 0 60px #2696E8,
+0 0 100px #2696E8;
+animation: colors 5s infinite;
+transform: translate(-50%, -50%);
+display: none;
+
+}
+
+@keyframes colors {
+0% {
+filter: hue-rotate(0deg);
+}
+100% {
+filter: hue-rotate(360deg);
+}
+}
+
+.cursor:before {
+content: '';
+position: absolute;
+background: #2696E8;
+width: 40px;
+height: 40px;
+opacity: 0.2;
+transform: translate(-30%, -30%);
+border-radius: 50%;
+}
+</style>
+
+<script>
+
+const cursor = document.querySelector(".cursor");
+var timeout;
+
+document.addEventListener("mousemove", (e) => {
+let x = e.pageX;
+let y = e.pageY;
+
+cursor.style.top = y + "px";
+cursor.style.left = x + "px";
+cursor.style.display = "block";
+
+function mouseStopped() {
+cursor.style.display = "none";
+}
+clearTimeout(timeout);
+timeout = setTimeout(mouseStopped, 5000);
+});
+
+document.addEventListener("mouseout", () => {
+cursor.style.display = "none";
+});
+</script>
+
+<div class="nav-bar">
+
+<ul>
+<li><a href="About Me.html">
+/ About Me  /</a></li>
+<li><a href="Gallery.html">
+/ Gallery  /</a></li>
+<li><a href="Blogs.html">/ Blogs  /</a></li>
+<li><a href="Articles.html"> / Articles  /</a></li>
+<li><a href="Login.html">/ Login  /</a></li>
+<li><a href="Documents.html">/ Documents  /</a></li>
+<li><a href="Download.html">/ Downloads  /</a></li>
+<li><a href="Products.html">
+/ Products  /</a></li>
+<li><a href="Recommendation.html">/ Recommendations  /</a></li>
+</ul>
+
+</div>
+<footer>
+<div class="container">
+<div class="row">
+<div class="col-sm">
+<ul>
+<li><a href="#">Terms of Service</a></li>
+<li><a href="#">Privacy Policy</a></li>
+</ul>
+</div>
+
+<div class="col-sm copyright">
+Copyright © 2023 MyWebsite. All rights reserved.
+</div>
+
+</div>
+<!-- end row -->
+
+</div>
+<!-- end container -->
+</footer>
+
+
+</body>
+</html>

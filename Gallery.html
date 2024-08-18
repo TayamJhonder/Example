@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="Gallery.js"></script>
+  <link rel="stylesheet" href="Gallery.css">
+  <title>Gallery</title>
+
+</head>
+<body>
+  <div class="audio">
+    <audio controls autoplay loop preload="auto">
+      <source src="work.mp3" type="audio/mp3">
+    </audio>
+  </div>
+
+  <div class="image-container">
+
+    <img src="swat.jpg" />
+  <img src="johnder.jpg" />
+<img src="1uptime.jpg" />
+<img src="kain.jpg" />
+<img src="Me.jpg" />
+<img src="noodles.jpg" />
+<img src="1up2.jpg" />
+<img src="Css.jpg" />
+<img src="wow.jpg" />
+<img src="power.jpg" />
+
+<img src="pula.jpg" />
+<img src="sushi.jpg" />
+<img src="girl.jpg" />
+<img src="m.jpg" />
+<img src="m1.jpg" />
+</div>
+
+
+
+<div class="cursor"></div>
+
+<style>
+
+
+.cursor {
+z-index: 999;
+position: fixed;
+background: #2696E8;
+width: 15px;
+height: 15px;
+border-radius: 50%;
+pointer-events: none;
+box-shadow: 0 0 20px #2696E8,
+0 0 60px #2696E8,
+0 0 100px #2696E8;
+animation: colors 5s infinite;
+transform: translate(-50%, -50%);
+display: none;
+
+}
+
+@keyframes colors {
+0% {
+filter: hue-rotate(0deg);
+}
+100% {
+filter: hue-rotate(360deg);
+}
+}
+
+.cursor:before {
+content: '';
+position: absolute;
+background: #2696E8;
+width: 40px;
+height: 40px;
+opacity: 0.2;
+transform: translate(-30%, -30%);
+border-radius: 50%;
+}
+</style>
+
+<script>
+
+const cursor = document.querySelector(".cursor");
+var timeout;
+
+document.addEventListener("mousemove", (e) => {
+let x = e.pageX;
+let y = e.pageY;
+
+cursor.style.top = y + "px";
+cursor.style.left = x + "px";
+cursor.style.display = "block";
+
+function mouseStopped() {
+cursor.style.display = "none";
+}
+clearTimeout(timeout);
+timeout = setTimeout(mouseStopped, 5000);
+});
+
+document.addEventListener("mouseout", () => {
+cursor.style.display = "none";
+});
+
+</script>
+
+
+
+<div class="nav-bar">
+
+<ul>
+        <li><a href="About Me.html">
+          / About Me  /</a></li>
+        <li><a href="Gallery.html">
+          / Gallery  /</a></li>
+        <li><a href="Blogs.html">/ Blogs  /</a></li>
+        <li><a href="Articles.html"> / Articles  /</a></li>
+        <li><a href="Login.html">/ Login  /</a></li>
+        <li><a href="Documents.html">/ Documents  /</a></li>
+        <li><a href="Download.html">/ Downloads  /</a></li>
+        <li><a href="Products.html">
+          / Products  /</a></li>
+        <li><a href="Recommendation.html">/ Recommendations  /</a></li>
+      </ul>
+
+</div>
+
+
+<footer>
+<div class="container1">
+<div class="row">
+<div class="col-sm">
+<ul>
+<li><a href="#">Terms of Service</a></li>
+<li><a href="#">Privacy Policy</a></li>
+</ul>
+</div>
+
+<div class="col-sm copyright">
+Copyright © 2023 MyWebsite. All rights reserved.
+</div>
+
+</div>
+<!-- end row -->
+
+</div>
+<!-- end container -->
+</footer>
+
+
+
+
+</body>
+</html>

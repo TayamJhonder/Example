@@ -1,0 +1,252 @@
+body {
+  background: linear-gradient(90deg, rgba(25220,20,60,0.8), rgba(255,127,80,0.8));
+  /*background: linear-gradient(90deg, rgba(25220,20,60,0.8), rgba(255,127,80,0.8));*/
+  background-size: 400% 400%;
+  animation: gradient 3s ease infinite;
+  opacity: 5;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+
+
+}
+img {
+  clip-path: polygon(50% 0%, 100% 25%, 75% 75%, 50% 100%, 25% 75%, 0% 25%);
+  display: block;
+  margin: auto;
+  border-radius: 150%;
+
+}
+
+.cool-image {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.cool-image:hover,
+.cool-image:focus,
+.cool-image:active {
+  opacity: 0.7;
+}
+.animation-container {
+  animation: spin 3s infinite linear;
+  transform-origin: center center;
+}
+@keyframes spin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+canvas {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/*@keyframes animate {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}*/
+
+h1 {
+  font-size: 5em;
+  font-family: 'Roboto Slab', serif;
+  animation: rainbow 1s ease-in-out infinite;
+  text-align: center;
+  background: linear-gradient(to right, rgba(250,100,10,100), rgba(255,10,100,1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow 1s ease-in-out infinite;
+  opacity: 5;
+}
+@keyframes rainbow {
+  0% {
+    background-position: 0 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0 50%
+  }
+}
+
+.audio {
+  border-radius: 10px;
+  padding-top: 16px;
+  background-image: url("simp.jpg");
+  animation: moveBg 5s linear infinite;
+  text-align: center;
+  height: 50vh;
+}
+
+
+
+
+@keyframes moveBg {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+h2 {
+  font-family: 'Roboto Slab', serif;
+  background: linear-gradient(to right, rgba(255,200,150,150), rgba(255,200,150,1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #fff;
+
+}
+
+.nav-bar {
+  margin: 0;
+  font-family: 'Roboto Slab', serif;
+  text-align: center;
+  background: linear-gradient(to right, rgba(250,100,10,100), rgba(255,10,100,1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow 1s ease-in-out infinite;
+  opacity: 5;
+
+
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+li {
+  display: inline-block;
+  font-size: 30px;
+}
+
+a {
+  display: block;
+  padding: 20px;
+}
+/*
+nav ul li a:hover {
+  background: linear-gradient(to right, rgba(255,200,150,150), rgba(255,200,150,0.1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-radius: 30px;
+}*/
+
+
+
+
+p {
+  font-size: .8em;
+  margin-top: .5em;
+  text-align: center
+
+
+}
+
+.terms-privacy {
+  display: flex;
+  text-align: center;
+}
+/*
+a:hover {
+  color: #ffcc00;
+  transition-duration: .5s;
+  transition-timing-function: cubic-bezier(0,.84,.44,1);
+}
+*/
+footer {
+  background: linear-gradient(to right, rgba(255,200,150,150), rgba(255,200,150,1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /*color: #fff;
+  */
+  padding: 20px;
+  bottom: 0;
+  text-align: center;
+}
+
+.tooltip {
+  font-size: 1em;
+  font-family: 'Roboto Slab', serif;
+  position: relative;
+  /* helps position the tooltip content */
+  font-weight: bolder;
+
+  color: coral;
+
+
+}
+
+
+
+
+
+.tooltip-content {
+  color: coral;
+  background-color: rgba(255, 172, 179, 1);
+
+  padding: 3px;
+  border-radius: 5px;
+  /* fully transparent (hidden) */
+  transition-duration: 1s;
+  opacity: 0;
+  /* duration of the fade in effect */
+
+  /* positions the tooltip content */
+  position: absolute;
+  z-index: 1;
+  text-align: center;
+  width: 110px;
+  top: -3px;
+  /* border-width x -1 */
+  left: 105%;
+}
+.tooltip:hover > .tooltip-content {
+  opacity: 1;
+  /* fully opaque (fully visible) */
+}
+.tooltip > .tooltip-content::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border: 5px solid transparent;
+  border-right-color: rgba(255, 172, 179, 1);;
+}
+
+h3 {
+  text-align: center;
+  background: linear-gradient(to right, rgba(250,100,10,100), rgba(255,10,100,1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow 1s ease-in-out infinite;
+  opacity: 5;
+  color: crimson;
+}
